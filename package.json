@@ -4,12 +4,10 @@
   "description": "Homebridge plugin for the next generation of Shelly devices",
   "main": "dist/index.js",
   "scripts": {
-    "prepare": "npm run build",
     "build": "rimraf ./dist && tsc",
     "lint": "eslint ./src --ext .ts,.js --max-warnings=0",
     "test": "jest",
     "preversion": "npm run build && npm run lint && npm test",
-    "prepublish": "npm run build",
     "postversion": "git push && git push --tags"
   },
   "engines": {
@@ -48,6 +46,6 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "shellies-ng": "github:jhnvz/node-shellies-ng"
+    "shellies-ng": "https://github.com/jhnvz/node-shellies-ng/tarball/main"
   }
 }
